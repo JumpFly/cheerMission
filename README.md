@@ -10,6 +10,11 @@
 #### macOs的plist任务 
 #### 简易学习教程[：给Mac添加定时任务](https://www.jianshu.com/p/4bb74330c97d)
 
+```
+终端执行 bash cheerConf.sh 
+按照提示进行启动/终止/设置间隔时长等操作
+```
+
 ***
 
 ### Ubuntu版
