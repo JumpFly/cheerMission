@@ -10,10 +10,11 @@ cheerShPath="/tmp/${cheerShName}"
 cheerShNote="export DISPLAY=:0.0 
 eog ${newPhotoPath}"
 cronTime="0 */1 * * *"
- logFilePath="/tmp/mylog.log"
+logFilePath="/tmp/mylog.log"
 
 funWithInit(){
 echo "`crontab -l`" > ${tempMissionBackUpPath}
+echo "${cheerShNote}" > ${cheerShPath}
 cp ${photoPath} ${newPhotoPath}
 echo "${cronTime} bash ${cheerShPath} >>${logFilePath} 2>&1" >> ${tempMissionBackUpPath}
 crontab ${tempMissionBackUpPath}
