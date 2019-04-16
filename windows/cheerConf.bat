@@ -1,13 +1,13 @@
-chcp 65001
+
 @echo off
 cd /d %~dp0
 set pwdPath=%~dp0
 
-echo (1.è‹¥æƒ³æ›¿æ¢å›¾ç‰‡ï¼Œåªéœ€æ›´æ¢å½“å‰ç›®å½•ä¸‹çš„cheerPhoto.jpgæ–‡ä»¶å¹¶é‡å¯ä»»åŠ¡å³å¯)
-echo (2.å›¾ç‰‡æ–‡ä»¶åè¦ä¸€è‡´å™¢!)
-echo (3.è®°å¾—å³é”®ä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œæœ¬æ–‡ä»¶å™¢!!)
+echo (1.ÈôÏëÌæ»»Í¼Æ¬£¬Ö»Ğè¸ü»»µ±Ç°Ä¿Â¼ÏÂµÄcheerPhoto.jpgÎÄ¼ş²¢ÖØÆôÈÎÎñ¼´¿É)
+echo (2.Í¼Æ¬ÎÄ¼şÃûÒªÒ»ÖÂàŞ!)
+echo (3.¼ÇµÃÓÒ¼üÒÔ¹ÜÀíÔ±Éí·İÔËĞĞ±¾ÎÄ¼şàŞ!!)
 
-set /p var="è¾“å…¥æ•°å­—(1:å¯åŠ¨é¼“åŠ±ä»»åŠ¡ 2:ç»ˆæ­¢é¼“åŠ±ä»»åŠ¡ 3:è®¾ç½®ä»»åŠ¡é—´éš”): "
+set /p var="ÊäÈëÊı×Ö(1:Æô¶¯¹ÄÀøÈÎÎñ 2:ÖÕÖ¹¹ÄÀøÈÎÎñ 3:ÉèÖÃÈÎÎñ¼ä¸ô): "
 if %var% == 1 (
 copy /Y %pwdPath%cheerPhoto.jpg C:\cheerPhoto.jpg
 echo start C:\cheerPhoto.jpg > C:\cheer.bat
@@ -17,7 +17,7 @@ SCHTASKS /Create /tn "cheerMission" /tr "C:\cheer.bat" /sc MINUTE /mo 1
 
 chcp 936
 
-echo "å¯åŠ¨é¼“åŠ±ä»»åŠ¡ï¼Œé»˜è®¤1åˆ†é’Ÿ"
+echo "Æô¶¯¹ÄÀøÈÎÎñ£¬Ä¬ÈÏ1·ÖÖÓ"
 pause
 exit
 ) 
@@ -27,19 +27,19 @@ if %var% == 2 (
 chcp 437
 SCHTASKS /Delete /TN "cheerMission" /F
 chcp 936
-echo "ç»ˆæ­¢é¼“åŠ±ä»»åŠ¡"
+echo "ÖÕÖ¹¹ÄÀøÈÎÎñ"
 pause
 exit
 ) 
  
 
 if %var% GTR 3 (
-echo "å‘½ä»¤é”™è¯¯"
+echo "ÃüÁî´íÎó"
 pause
 exit
 ) 
 
-set /p duration=è¯·è¾“å…¥æ—¶é•¿åˆ†é’Ÿ
+set /p duration=ÇëÊäÈëÊ±³¤·ÖÖÓ
 copy /Y %pwdPath%cheerPhoto.jpg C:\cheerPhoto.jpg
 echo start C:\cheerPhoto.jpg > C:\cheer.bat
 chcp 437
@@ -47,7 +47,7 @@ SCHTASKS /Delete /TN "cheerMission" /F
 SCHTASKS /Create /tn "cheerMission" /tr "C:\cheer.bat" /sc MINUTE /mo %duration%
 chcp 936
 
-echo "è®¾ç½®æ—¶é•¿%duration%åˆ†é’Ÿå®Œæ¯•,å·²å°è¯•é‡å¯ä»»åŠ¡"
+echo "ÉèÖÃÊ±³¤%duration%·ÖÖÓÍê±Ï,ÒÑ³¢ÊÔÖØÆôÈÎÎñ"
 
 pause
 echo "bye~"
