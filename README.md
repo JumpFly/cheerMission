@@ -90,6 +90,14 @@ crond 与anacron 的关系:
 
 ***
 ### Windows版
-### todo
+#### dos命令+schtasks任务
+#### [schtasks无法运行的情况](https://social.technet.microsoft.com/Forums/en-US/3b6ec501-9fd4-4176-9e90-212d01e9d2de/schtasks-task-status-quotcould-not-startquot-result-2147024894?forum=w7itprogeneral)
+
+```
+右键以管理员身份运行cheerConf.bat
+(因为涉及到copy图片到C:\  需要管理员权限)
+按照提示进行启动/终止/设置间隔时长等操作
+(ps:dos写脚本略感痛苦啊....>_< !! 看完cheerConf.bat里面脚本命令的同学请不要扔我砖头)
+```
 
 ***
